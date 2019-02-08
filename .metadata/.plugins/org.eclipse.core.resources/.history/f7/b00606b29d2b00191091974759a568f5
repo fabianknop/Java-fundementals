@@ -1,0 +1,18 @@
+package opdrachten;
+
+import java.util.Scanner;
+
+public class Opdracht2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("Naam pls: ");
+		Scanner scanner = new Scanner(System.in); 
+		String name = scanner.nextLine();
+		scanner.close();
+		if(name.equals("Willem")){
+			System.out.println("Ga eens heel gauw weg");
+		} else System.out.println("Welkom " + name);
+	}
+
+}

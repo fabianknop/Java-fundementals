@@ -6,20 +6,16 @@ public class LifeModel {
 	private boolean[][]	grid = new boolean[20][30];
 	
 	public LifeModel(){	
-		int trueCounter = 0;
 		for(int i = 0; i < 20; i++){
 			for(int j = 0; j < 30; j++){
 				if(i == 0 || i == 19){
 					grid[i][j] = false;
 				}
 				Random generator = new Random();
-				boolean valueOfCel = generator.nextBoolean();
-				if(valueOfCel){
-					trueCounter++;
-					if(trueCounter % 2 == 0){
-						grid[i][j] = valueOfCel;
-					}
-				} else grid[i][j] = valueOfCel;
+				int valueOfCel = generator.nextInt(10);
+				if(valueOfCel == 1){
+					grid[i][j] = true;					
+				} else grid[i][j] = false;
 			}
 		}
 	}
@@ -43,9 +39,9 @@ public class LifeModel {
 	private int telBuren(int rij, int kolom){
 	    int count = 0;
 	    for(int i = rij - 1; i <= rij + 1; i++) {
-	        if (i >= 0 && i < grid.length) // fixed here
+	        if (i >= 0 && i < grid.length)
 	            for(int j = kolom - 1; j <= kolom + 1; j++) 
-	                if (j >= 0 && j < grid[i].length) // fixed here
+	                if (j >= 0 && j < grid[i].length) 
 	                    if (i != rij || j != kolom) 
 	                        if (grid[i][j] == true) 
 	                            count++;

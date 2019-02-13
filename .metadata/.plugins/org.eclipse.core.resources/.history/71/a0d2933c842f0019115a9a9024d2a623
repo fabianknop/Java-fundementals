@@ -1,0 +1,10 @@
+package Opdracht1;
+
+public class ClockApplication {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

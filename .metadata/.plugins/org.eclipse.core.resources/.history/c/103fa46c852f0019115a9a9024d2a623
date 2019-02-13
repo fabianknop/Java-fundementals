@@ -1,0 +1,30 @@
+package Opdracht1;
+
+import java.util.Observable;
+import java.util.Observer;
+
+import Dobbelsteen.DieConsoleView;
+
+public class ClockConsoleView implements Observer {
+	ClockModel model = new ClockModel();
+	private ClockConsoleView[] clockViews;
+	int hour = model.getHour();
+	int minute = model.getMinute();
+
+	public ClockConsoleView(ClockModel model) {
+		this.model = model;
+		System.out.println(hour + ":" + minute);
+	}
+
+	@Override
+	public void update(Observable arg0, Object arg1) {
+		refresh();
+	}
+
+	public void refresh() {
+		for (ClockConsoleView view : clockViews)
+			view.refresh();
+		System.out.println(hour + ":" + minute);
+	}
+
+}

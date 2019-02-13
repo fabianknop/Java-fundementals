@@ -1,0 +1,15 @@
+package Dobbelsteen;
+
+public class DiceApplication {
+	public DiceApplication() {
+		SetOfDice setOfDice = new SetOfDice(5);
+		new DiceView(setOfDice);
+		while (true) {
+			setOfDice.cast();;
+		}
+	}
+
+	public static void main(String[] args) {
+		new DiceApplication();
+	}
+}

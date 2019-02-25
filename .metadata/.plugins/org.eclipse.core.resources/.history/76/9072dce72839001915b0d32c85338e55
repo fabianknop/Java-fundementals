@@ -11,7 +11,6 @@ public class LifeApplication {
 		new LifeConsoleView(lifemodel);
 		Timer tick = new Timer( 1000, new LifeController( lifemodel ) );
 		tick.start();
-		lifemodel.toon();
 		WaitForEnter();
 	}
 	

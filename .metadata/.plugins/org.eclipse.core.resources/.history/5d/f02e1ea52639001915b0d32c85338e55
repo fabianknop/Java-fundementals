@@ -1,0 +1,25 @@
+package gameOfLife;
+
+public class lifeConsoleView {
+	LifeModel model; 
+	public boolean[][] grid;
+	public lifeConsoleView(LifeModel model){
+		this.model = model;
+	}
+	
+	public void displayCel(int row, int column){
+		if(model.isLevend(row, column)){
+			System.out.print("X");
+		} else System.out.print(".");
+	}
+	
+	public void refresh(){
+		grid = model.getGrid();
+		for(int i = 0; i < 20; i++){
+			for(int j = 0; j < 30; j++){
+				displayCel(i,j);
+			}
+			System.out.println("");
+		}
+	}
+}

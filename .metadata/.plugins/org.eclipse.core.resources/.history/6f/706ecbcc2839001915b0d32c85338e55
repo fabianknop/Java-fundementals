@@ -1,0 +1,13 @@
+package gameOfLife;
+
+import javax.swing.Timer;
+
+public class LifeApplication {
+
+	public static void main(String[] args) {
+		LifeModel lifemodel = new LifeModel();
+		LifeConsoleView view = new LifeConsoleView(lifemodel);
+		Timer tick = new Timer( 1, new LifeController( lifemodel ) );
+		tick.start();
+	}
+}

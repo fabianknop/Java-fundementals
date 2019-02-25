@@ -9,9 +9,8 @@ public class LifeApplication {
 	public static void main(String[] args) {
 		LifeModel lifemodel = new LifeModel();
 		new LifeConsoleView(lifemodel);
-		Timer tick = new Timer( 1000, new LifeController( lifemodel ) );
+		Timer tick = new Timer( 1, new LifeController( lifemodel ) );
 		tick.start();
-		lifemodel.toon();
 		WaitForEnter();
 	}
 	

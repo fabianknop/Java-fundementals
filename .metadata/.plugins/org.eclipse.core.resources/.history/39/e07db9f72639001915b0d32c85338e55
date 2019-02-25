@@ -1,0 +1,16 @@
+package gameOfLife;
+
+public class LifeApplication {
+
+	public static void main(String[] args) {
+		LifeModel lifemodel = new LifeModel();
+		LifeConsoleView view = new LifeConsoleView(lifemodel);
+		
+		while(true){
+			lifemodel.toon();
+			view.refresh();
+			lifemodel.volgendeGeneratie();
+		}
+	}
+
+}

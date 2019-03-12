@@ -1,0 +1,33 @@
+package gameOfLife;
+
+import java.util.Scanner;
+
+import javax.swing.JFrame;
+import javax.swing.Timer;
+
+public class LifeApplication extends JFrame{
+	
+	public LifeApplication() {
+		setBounds( 200, 200, 700, 700 );
+		setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
+		setTitle( "Game of Life" );
+		setVisible( true );
+
+	}
+
+	public static void main(String[] args) {
+		new LifeApplication();
+		LifeModel lifemodel = new LifeModel();
+		new LifePanelView(lifemodel);
+		new LifeConsoleView(lifemodel);
+		Timer tick = new Timer( 1000, new LifeController( lifemodel ) );
+		tick.start();
+		lifemodel.toon();
+		WaitForEnter();
+	}
+	
+	private static void WaitForEnter() {
+		new Scanner(System.in).nextLine();
+		System.exit(0);
+	}
+}

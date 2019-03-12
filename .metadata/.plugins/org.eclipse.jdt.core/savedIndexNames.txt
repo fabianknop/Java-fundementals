@@ -1,23 +1,5 @@
-INDEX VERSION 1.129+D:\School\Java fundamentals\Java-fundementals\.metadata\.plugins\org.eclipse.jdt.core
-3304887903.index
-4097235347.index
-4128366250.index
-1242709734.index
-3745499195.index
-1478505328.index
-2787246164.index
-1061955555.index
-3438990737.index
-2764432139.index
-1492302723.index
-3426121206.index
-3582903896.index
-2300401851.index
-3008842268.index
-4125234420.index
-210513633.index
-1816379441.index
-13221442.index
-1190218878.index
-1108945902.index
+INDEX VERSION 1.129+S:\Java-fundementals\.metadata\.plugins\org.eclipse.jdt.core
 1283954658.index
+3438990737.index
+3582903896.index
+4199294735.index
